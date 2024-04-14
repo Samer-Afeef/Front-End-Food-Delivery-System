@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       locale: const Locale("ar"),
       debugShowCheckedModeBanner: false,
       initialBinding: InitialBindings() ,
-      initialRoute: AppRoutes.onBoarding,
+      initialRoute: AppRoutes.homeScreen,
       getPages: pagesRoute,
     );
   }

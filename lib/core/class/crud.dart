@@ -4,13 +4,18 @@ import './status_request.dart';
 import '../functions/check_internet.dart';
 import 'package:http/http.dart' as http;
 
+
+
+Map<String, String> _myHeaders = {'Content-type': 'application/json; charset=UTF-8'};
+
 class Crud {
+
   Future<Either<StatusRequest, Map>> postData(String linkUrl, Map data) async {
     try {
       if (await checkInternet()) {
         var response = await http.post(
           Uri.parse(linkUrl),
-          body: data,
+          body: data,headers: _myHeaders
         );
         print(response.statusCode);
 
@@ -35,7 +40,7 @@ class Crud {
   Future<Either<StatusRequest, Map>> getData(String linkUrl) async {
     try {
       if (await checkInternet()) {
-        var response = await http.get(Uri.parse(linkUrl));
+        var response = await http.get(Uri.parse(linkUrl),headers: _myHeaders);
         print(response.statusCode);
 
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -60,7 +65,7 @@ class Crud {
   Future<Either<StatusRequest, Map>> putData(String linkUrl, Map data) async {
     try {
       if (await checkInternet()) {
-        var response = await http.put(Uri.parse(linkUrl), body: data);
+        var response = await http.put(Uri.parse(linkUrl), body: data,headers: _myHeaders);
         print(response.statusCode);
 
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -82,11 +87,10 @@ class Crud {
     }
   }
 
-  Future<Either<StatusRequest, Map>> deleteData(
-      String linkUrl, Map data) async {
+  Future<Either<StatusRequest, Map>> deleteData(String linkUrl, Map data) async {
     try {
       if (await checkInternet()) {
-        var response = await http.delete(Uri.parse(linkUrl), body: data);
+        var response = await http.delete(Uri.parse(linkUrl), body: data,headers: _myHeaders);
         print(response.statusCode);
 
         if (response.statusCode == 200 || response.statusCode == 201) {
@@ -107,4 +111,5 @@ class Crud {
       return Left(StatusRequest.serverException);
     }
   }
+
 }
