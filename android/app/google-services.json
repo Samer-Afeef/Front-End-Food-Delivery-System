@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "346259693275",
+    "project_id": "wasale-662b6",
+    "storage_bucket": "wasale-662b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346259693275:android:b1d3e1f341bf4c6ffdf6fe",
+        "android_client_info": {
+          "package_name": "com.SamerAfeef.food_delivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgQDqFw8-YkwDbmWeuqxNVPOM0hZCq1kY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346259693275:android:fbe162ef242a8d0dfdf6fe",
+        "android_client_info": {
+          "package_name": "com.g3.wasale"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgQDqFw8-YkwDbmWeuqxNVPOM0hZCq1kY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
